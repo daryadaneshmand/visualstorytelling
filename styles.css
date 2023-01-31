@@ -1,0 +1,31 @@
+#container {
+}
+
+h1, h2, h3, h4, p, li, ol {
+    color:aliceblue
+}
+
+h1 {
+    font-family: 'Good Times', monospace, sans-serif;
+    font-size: 3em;
+    color:aliceblue;
+}
+
+h2 {
+    font-family: monospace;
+}
+
+
+body {
+    background-color: rgb(26, 12, 44);
+    margin: 2em;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 4em;
+	margin-bottom: 4em;
+
+}
