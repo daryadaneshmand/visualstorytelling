@@ -1,24 +1,37 @@
-#container {
-}
+
+
 
 h1, h2, h3, h4, p, li, ol {
-    color:aliceblue
+    color:rgb(0, 0, 0)
 }
 
 h1 {
-    font-family: 'Good Times', monospace, sans-serif;
+    font-family: 'Source Sans Pro';
     font-size: 3em;
-    color:aliceblue;
+    color:rgb(0, 0, 0);
+}
+
+p, h2, h3, li {
+    font-family: "Montserrat"
 }
 
 h2 {
-    font-family: monospace;
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+p {
+    font-size: 1.5em;
 }
 
 
 body {
-    background-color: rgb(26, 12, 44);
-    margin: 2em;
+    background-color: rgb(180, 224, 188);
+    margin: auto 20vw;
+    margin-bottom: 20vh;
 }
 
 .container {
@@ -28,4 +41,138 @@ body {
 	margin-top: 4em;
 	margin-bottom: 4em;
 
+}
+
+.button {
+	background-color: rgb(0, 0, 0);
+    color: #fff;
+	border:  1px solid rgb(230, 230, 230); 
+	border-radius: 5px;
+	font-weight: bold;
+	cursor: pointer;
+	display: inline-block;
+	padding: 10px 20px;
+    margin-bottom: 1em;
+}
+
+input {
+	appearance: none;
+	margin: 0;
+}
+
+/* colored buttons  */
+
+/* 
+.button:hover {
+	background-color: #fff;
+	border:  1px solid salmon;
+	color: #333;
+}
+*/
+#redbutton:hover {
+	background-color:#b01919;
+	border:  1px solid rgb(255, 255, 255);
+	color: rgb(255, 255, 255);
+}
+#orangebutton:hover {
+	background-color:#d77519;
+	border:  1px solid rgb(255, 255, 255);
+	color: #333;
+}
+.yellowbutton:hover {
+	background-color: #f8f054;
+	border:  1px solid rgb(255, 255, 255);
+	color: #333;
+}
+.greenbutton:hover {
+	background-color:#80f552;
+	border:  1px solid rgb(255, 255, 255);
+	color: #333;
+}
+.bluebutton:hover {
+	background-color: #5cadff;
+	border:  1px solid rgb(255, 255, 255);
+	color: #333;
+}
+.indigobutton:hover {
+	background-color:#4B0082;
+	border:  1px solid rgb(255, 255, 255);
+	color: rgb(255, 255, 255);
+}
+.violetbutton:hover {
+	background-color: #8F00FF;
+	border:  1px solid rgb(255, 255, 255);
+	color: rgb(255, 255, 255);
+}
+
+
+
+.photo {
+	max-width: 600px;
+	width: 100%;
+}
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border:  1px solid rgb(230, 230, 230); 
+	border-radius: 5px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #8F00FF, #4B0082, #b01919,#d77519, #f8f054,#80f552, #5cadff);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+/* GLOWING BUTTON STYLES */
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+/* makes rainbow move */
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 100% 0; }
+    100% { background-position: 0 0; }
 }
